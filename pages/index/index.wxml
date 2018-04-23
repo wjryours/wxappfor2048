@@ -1,0 +1,20 @@
+<view class='wrapper'>
+  <view class='box'>
+    <view class='box_wrapper'>
+      <view class='box_row' wx:for="{{BoxData}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item">
+        <view class="box_item box_item_{{sitem}}" wx:for="{{item}}" wx:key="{{sindex}}" wx:for-index="sindex" wx:for-item="sitem" >
+          <view class='box_num' wx:if="{{sitem!=0}}">
+            <view>{{sitem}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 用于测试的按钮 -->
+<view class='operation'>
+  <view class='operation_btn' 
+  wx:for="{{Operation}}" wx:key="{{index}}" bindtap='OperationMove' data-case='{{item.Case}}'>
+      {{item.name}}
+  </view>
+</view>
